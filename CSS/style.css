@@ -1,0 +1,253 @@
+/*
+    The Daily Grind - Main Stylesheet
+    Color Palette: #4E342E (brown), #F5F5DC (cream), #6B8E23 (green)
+    Typography: Montserrat (headings), Open Sans (body)
+*/
+
+/* Basic reset & variables */
+:root{
+    --bg:#fff;
+    --accent:#c96b3d;
+    --muted:#6b6b6b;
+    --nav-bg: #fff;
+    --card-bg: #fbfbfb;
+    --radius:12px;
+    --max-width:1100px;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #F5F5DC;
+    color: #4E342E;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Typography Scale */
+h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+p, li, label, input, textarea {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background: #4E342E;
+    color: #F5F5DC;
+    padding: 1rem 0;
+}
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1rem}
+.logo{font-weight:700;font-family:"Montserrat",sans-serif;font-size:1.125rem;color:var(--accent)}
+.nav-links{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.nav-links a{display:inline-block;padding:.5rem .75rem;border-radius:8px;color:inherit;text-decoration:none;font-weight:600}
+.nav-links a:hover,.nav-links a.active{background:rgba(201,107,61,0.08);color:var(--accent)}
+
+/* Updated Navigation Styles */
+.navbar {
+    background: linear-gradient(to right, #4a3021, #8b5d3b);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.nav-links a.active {
+    background: #c96b3d;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Mobile toggle (hidden on desktop) */
+.nav-toggle{display:none;background:transparent;border:0;padding:.5rem;cursor:pointer}
+.nav-toggle .hamburger{position:relative;display:inline-block;width:24px;height:2px;background:#222;border-radius:2px}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after{
+    content:"";
+    position:absolute;
+    left:0;
+    width:24px;
+    height:2px;
+    background:#222;
+    border-radius:2px;
+    transition:transform .25s ease, top .2s ease, opacity .2s ease;
+}
+.nav-toggle .hamburger::before{top:-7px}
+.nav-toggle .hamburger::after{top:7px}
+.nav-toggle.open .hamburger{background:transparent}
+.nav-toggle.open .hamburger::before{transform:rotate(45deg);top:0}
+.nav-toggle.open .hamburger::after{transform:rotate(-45deg);top:0}
+
+/* Hero */
+.hero{padding:2.5rem 0;background:linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%)}
+.hero .hero-text{max-width:900px;margin:0 auto;text-align:center;padding:1rem}
+.hero h1{margin:.5rem 0;font-family:"Montserrat",sans-serif;font-size:2.25rem;color:#222}
+.hero p{color:var(--muted);margin-bottom:1rem}
+
+/* Call to Action Button */
+.cta, .btn {
+    display: inline-block;
+    background: #6B8E23;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.cta:hover, .btn:hover, .cta:focus, .btn:focus {
+    background: #4E342E;
+    outline: 2px solid #6B8E23;
+    outline-offset: 2px;
+}
+
+/* Highlights & Menu Layout */
+.highlights, .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.highlight, .menu-item {
+    flex: 1 1 250px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(78,52,46,0.08);
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 220px;
+    max-width: 320px;
+}
+.menu-item img, .highlight img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    background: #4E342E;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    border-radius: 0 0 8px 8px;
+}
+footer{padding:1.25rem;color:var(--muted);text-align:center;border-top:1px solid rgba(0,0,0,0.04);margin-top:2rem}
+footer p{margin:.25rem 0}
+footer a{color:inherit;margin:0 .5rem}
+
+/* Accessibility */
+a:focus, button:focus, .cta:focus {
+    outline: 2px solid #6B8E23;
+    outline-offset: 2px;
+}
+
+/* Utility */
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem}
+img{display:block;max-width:100%;height:auto;border-radius:inherit}
+
+/* Reveal animation helper */
+.visible{opacity:1;transform:none;transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1)}
+.hero-text, .highlight{will-change:opacity, transform}
+
+/* Responsive */
+@media (max-width:900px){
+    .highlights .container{grid-template-columns:repeat(2,1fr)}
+    .hero h1{font-size:1.75rem}
+}
+@media (max-width:600px){
+    .nav-toggle{display:inline-block}
+    .nav-links{position:absolute;top:64px;right:1rem;background:var(--nav-bg);flex-direction:column;gap:0;padding:.75rem;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);display:none;min-width:180px}
+    .nav-links.open{display:flex}
+    .nav-links li{margin:0}
+    .nav-links a{display:block;padding:.6rem 1rem}
+    .navbar{position:relative}
+    .highlights .container{grid-template-columns:1fr}
+    .hero .hero-text{padding:.5rem}
+}
