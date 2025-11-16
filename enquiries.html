@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Daily Grind | Enquiry</title>
+  <meta name="description" content="Make enquiries about services, volunteer or sponsorship opportunities at The Daily Grind.">
+  <meta name="keywords" content="enquiry, volunteer, sponsorship, The Daily Grind">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+
+<script src="js/main.js"></script>
+
+ <body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">☕ The Daily Grind</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiries.html">Enquiries</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+<body>
+  <main class="container">
+    <h1>Enquiry</h1>
+    <form id="enquiryForm" class="contact-form" novalidate>
+      <label for="enq-name">Name</label>
+      <input id="enq-name" name="name" type="text" required>
+
+      <label for="enq-email">Email</label>
+      <input id="enq-email" name="email" type="email" required>
+
+      <label for="enq-type">Enquiry Type</label>
+      <select id="enq-type" name="type" required>
+        <option value="">Select</option>
+        <option value="service">Service enquiry</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="sponsor">Sponsorship</option>
+      </select>
+
+      <label for="enq-details">Details / Request</label>
+      <textarea id="enq-details" name="details" rows="5" required></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Get Enquiry Response</button>
+        <div id="enquiry-message" class="form-response" aria-live="polite"></div>
+      </div>
+    </form>
+  </main>
+  <footer>
+     <p>© 2025 The Daily Grind. All rights reserved.</p>
+        <p>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </p>
+</body>
+</html>

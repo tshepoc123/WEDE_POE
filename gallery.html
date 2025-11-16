@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- current head contents -->
+    <meta charset="UTF-8">
+    <title>The Daily Grind | Gallery</title>
+    <meta name="description" content="Gallery — The Daily Grind. Browse photos of our coffee, pastries and café interior.">
+    <meta name="keywords" content="coffee gallery, cafe photos, pastries, The Daily Grind">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="js/main.js" defer></script>
+</head>
+
+<script src="js/main.js"></script>
+
+<body>
+  <header>
+    <!-- simple nav -->
+    <nav class="navbar">
+      <div class="logo">☕ The Daily Grind</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiries.html">Enquiries</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="gallery" class="gallery-grid">
+      <h1>Gallery</h1>
+      <p>Browse our coffee shots and café atmosphere.</p>
+
+      <div class="gallery-list">
+        <!-- use your actual image filenames -->
+        <figure class="gallery-item">
+          <img src="Images/latte.jpg" alt="Latte art on a ceramic cup" width="650px" length="650px" class="lightbox-img" loading="lazy">
+          <figcaption>Latte Art</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="Images/coffee art.jpg" alt="Coffee art close up" width="650px" length="650px" class="lightbox-img" loading="lazy">
+          <figcaption>Coffee Art</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="Images/pastry.jpg" alt="Fresh pastry on a plate" width="650px" length="650px" class="lightbox-img" loading="lazy">
+          <figcaption>Fresh Pastries</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="Images/cafe.jpg" alt="Interior of the café" width="650px" length="650px" class="lightbox-img" loading="lazy">
+          <figcaption>Café Ambience</figcaption>
+        </figure>
+        <figure class="gallery-item">
+            <img src="Images/espresso.jpg" alt="Espresso shot in a small cup" width="650px" length="650px" class="lightbox-img" loading="lazy">
+            <figcaption> Espresso Shot</figcaption>
+          </figure>
+        <figure class="gallery-item">
+            <img src="Images/artisan coffee.jpg" alt="Artisan coffee in a rustic setting" width="650px" length="650px" class="lightbox-img" loading="lazy">
+            <figcaption>Artisan Coffee</figcaption>
+        <figure>
+          
+        </figure>
+          </figure>
+        <!-- add more figures for other images -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox (hidden by default) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" tabindex="-1">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+    <button id="lightbox-prev" class="lightbox-nav" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
+    <button id="lightbox-next" class="lightbox-nav" aria-label="Next"><i class="fa fa-chevron-right"></i></button>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 The Daily Grind. All rights reserved.</p>
+  </footer>
+</body>
+</html>

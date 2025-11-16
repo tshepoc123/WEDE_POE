@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Daily Grind | Contact</title>
+  <meta name="description" content="Contact The Daily Grind. Find our location, hours and send us a message.">
+  <meta name="keywords" content="contact, The Daily Grind, coffee shop, Johannesburg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="js/main.js" defer></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+</head>
+
+<script src="js/main.js"></script>
+
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">☕ The Daily Grind</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiries.html">Enquiries</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+  <header><!-- nav here --></header>
+  <main class="container">
+    <h1>Contact Us</h1>
+    <section class="contact-grid">
+      <div id="map" class="contact-map" aria-label="Map showing our location" style="min-height:300px;"></div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="contact-name">Name</label>
+        <input id="contact-name" name="name" type="text" required>
+
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="email" type="email" required>
+
+        <label for="contact-type">Type of Message</label>
+        <select id="contact-type" name="type" required>
+          <option value="">Select</option>
+          <option>General</option>
+          <option>Feedback</option>
+          <option>Support</option>
+          <option>Sponsorship</option>
+        </select>
+
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+          <div id="contact-message-response" class="form-response" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+     <p>© 2025 The Daily Grind. All rights reserved.</p>
+        <p>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </p>
+  </footer>
+</body>
+</html>
